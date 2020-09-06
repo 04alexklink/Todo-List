@@ -2,8 +2,9 @@ import React from 'react';
 
 class TodoItem extends React.Component {
   render() {
+    console.log(this.props.todo.title)
     return (
-      <h3>"hello"</h3>
+      <p>{this.props.todo.title}</p>
     );
   }
 }
