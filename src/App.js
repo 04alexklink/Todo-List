@@ -13,7 +13,7 @@ class App extends React.Component {
       {
         id:2,
         title: 'Eat 5 pieces of fruit',
-        completed: false
+        completed: true
       },
       {
         id:3,

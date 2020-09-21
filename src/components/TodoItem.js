@@ -2,9 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class TodoItem extends React.Component {
+
+  getStyle = () => {
+    if(this.props.todoItem.completed) {
+      return {
+        textDecoration: 'line-through'
+      }
+    } else {
+      return {
+        textDecoration: 'none'
+      }
+    }
+  }
   render() {
     return (
-      <div style={itemStyle}>
+      <div style={this.getStyle()}>
       <p>{this.props.todoItem.title}</p>
       </div>
     );
@@ -15,8 +27,4 @@ TodoItem.propTypes = {
   todoItem: PropTypes.object.isRequired
 }
 
-const itemStyle = {
-  backgroundColor: '#f4f4f4'
-
-}
 export default TodoItem;
