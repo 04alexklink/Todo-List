@@ -30,10 +30,15 @@ class App extends React.Component {
       return todo;
     })});
   }
+
+  deleteButton = () => {
+    console.log('in App.js')
+  }
+
   render() {
     return (
       <div>
-        <Todos todos={this.state.todos} markComplete={this.markComplete}/>
+        <Todos todos={this.state.todos} markComplete={this.markComplete} deleteButton={this.deleteButton}/>
       </div>
     );
   }
