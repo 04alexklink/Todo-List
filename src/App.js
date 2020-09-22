@@ -31,8 +31,8 @@ class App extends React.Component {
     })});
   }
 
-  deleteButton = () => {
-    console.log('in App.js')
+  deleteButton = (id) => {
+    console.log(id)
   }
 
   render() {
