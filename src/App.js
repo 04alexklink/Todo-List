@@ -22,8 +22,9 @@ class App extends React.Component {
       }
     ]
   }
-  markComplete = (id) => {
+  markComplete = (id, title) => {
     console.log(id)
+    console.log(title)
   }
   render() {
     return (
