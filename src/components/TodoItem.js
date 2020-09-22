@@ -11,10 +11,18 @@ class TodoItem extends React.Component {
       borderBottom: '1px#ccc dotted'
     }
   }
+ 
+  markComplete = () => {
+    console.log('fromtodoItem.js')
+  }
+  
   render() {
     return (
       <div style={this.getStyle()}>
-      <p>{this.props.todoItem.title}</p>
+      <p>
+        < input type = "checkbox" onChange={this.markComplete} /> {' '}
+        {this.props.todoItem.title}
+      </p>
       </div>
     );
   }
