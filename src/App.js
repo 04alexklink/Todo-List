@@ -13,7 +13,7 @@ class App extends React.Component {
       {
         id:2,
         title: 'Eat 5 pieces of fruit',
-        completed: true
+        completed: false
       },
       {
         id:3,
@@ -23,8 +23,12 @@ class App extends React.Component {
     ]
   }
   markComplete = (id, title) => {
-    console.log(id)
-    console.log(title)
+    this.setState({ todos: this.state.todos.map(todo => {
+      if(todo.id === id) {
+        todo.completed = !todo.completed
+      }
+      return todo;
+    })});
   }
   render() {
     return (
