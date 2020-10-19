@@ -22,23 +22,25 @@ class App extends React.Component {
       }
     ]
   }
-  markComplete = (id, title) => {
+  markComplete = (id) => {
     this.setState({ todos: this.state.todos.map(todo => {
       if(todo.id === id) {
-        todo.completed = !todo.completed
+        todo = !todo.completed
       }
       return todo;
     })});
   }
 
-  deleteButton = (id) => {
+  deleteTodo = (id) => {
+    // this.setState({ todos: this.state.todos.filter(todo => todo.id !== id)});
     console.log(id)
   }
+    
 
   render() {
     return (
       <div>
-        <Todos todos={this.state.todos} markComplete={this.markComplete} deleteButton={this.deleteButton}/>
+        <Todos todos={this.state.todos} markComplete={this.markComplete} deleteTodo={this.deleteTodo}/>
       </div>
     );
   }

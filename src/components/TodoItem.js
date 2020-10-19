@@ -17,9 +17,9 @@ class TodoItem extends React.Component {
     return (
       <div style={this.getStyle()}>
       <p>
-        < input type = "checkbox" onChange={this.props.markComplete.bind(this, this.props.todoItem.id, this.props.todoItem.title)} /> {' '}
+        < input type = "checkbox" onChange={this.props.markComplete.bind(this, this.props.todoItem.id)} /> {' '}
         {this.props.todoItem.title}
-        <button style={btnStyle} onClick={this.props.deleteButton.bind(this, this.props.todoItem.id)}>Delete Note</button>
+        <button style={btnStyle} onClick={this.props.deleteTodo.bind(this, this.props.todoItem.id)}>Delete Note</button>
       </p>
       </div>
     );
